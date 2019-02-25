@@ -11,6 +11,9 @@ void setup() {
   pinMode(LED_PIN, OUTPUT);      // declare LED as input
 
   Serial.begin(9600); // setting baud speed for Serial (a baud is a pulse)
+
+  // 'print' on the Serial port, i.e send a message through the serial port
+  Serial.println("Lets start using the button!");
 }
 
 void loop() {
@@ -31,13 +34,13 @@ void loop() {
     if (buttonActiveSince > 0) {
       // End Long Press event
       if (longPressActive == true) {
-        Serial.println("button-led-daba,2");
+        Serial.println("button-action,2");
         digitalWrite(LED_PIN, LOW);  // turn LED OFF
         longPressActive = false;
 
       // End Short Press event
       } else {
-        Serial.println("button-led-daba,1");
+        Serial.println("button-action,1");
       }
       buttonActiveSince = 0;
     }
