@@ -1,6 +1,6 @@
-# A MAGIC WHEELCHAIR
-
-BY XINYI
+# a magic Wheelchair
+1
+By cshudan
 
 Wheelchair Design Platform is a repository that contains some resources to help
 designers and developers speak the same language, and work together towards
@@ -12,6 +12,7 @@ a prospering research and design community around wheelchair users.
 ![IoT1 Exhibition](/docs/workshops/images/iot1_exhibition.jpg)
 
 ## Workshops
+
 
 * [Getting started](/docs/workshops/GettingStarted.md)
 * [Workshop 1: Building an Internet-Connected Wheelchair](/docs/workshops/Workshop1.md)
