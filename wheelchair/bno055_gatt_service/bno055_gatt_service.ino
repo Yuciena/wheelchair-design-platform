@@ -131,7 +131,7 @@ void orientation() {
   float quatX = quat.x();
   float quatY = quat.y();
   float quatZ = quat.z();
-  
+
   // Command is sent when \n (\r) or println is called
   // AT+GATTCHAR=CharacteristicID,value
   ble.print( F("AT+GATTCHAR=") );
