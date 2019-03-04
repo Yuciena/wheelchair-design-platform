@@ -1,3 +1,6 @@
+# a magic Wheelchair
+1
+By cshudan
 
 # Magic Wheelchair
 
@@ -13,6 +16,7 @@ a prospering research and design community around wheelchair users.
 ![IoT1 Exhibition](/docs/workshops/images/iot1_exhibition.jpg)
 
 ## Workshops
+
 
 * [Getting started](/docs/workshops/GettingStarted.md)
 * [Workshop 1: Building an Internet-Connected Wheelchair](/docs/workshops/Workshop1.md)

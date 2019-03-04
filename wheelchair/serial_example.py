@@ -18,10 +18,10 @@ load_dotenv()
 THING_ID = os.environ['THING_ID']
 THING_TOKEN = os.environ['THING_TOKEN']
 
-
 # Instantiate a thing with its credential
 my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 print(my_thing.name)
+
 # We can read the details of our thing,
 # i.e. retrieving its information from the hub
 my_thing.read()
