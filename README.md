@@ -18,10 +18,12 @@ Sensors:
 - Accelerator sensor to detect whether the wheelchair user is going to fast (in combination with proximity; going to fast into direction of an object/person)
 - Button: activate the button and send the signal to the IKEA staff that they need help when they cannot get the stuff by themselves
 
+Assignment 2:
+
 Actuator:
-Vibration：combined with GPS and give the disabled command of directions  through either a vibration actuator or a speaker actuator
-speaker:  To give verbal guidance for disabled people when the wheelchair is detected to be too close to surrounding objects.
-Light: When the wheelchair goes too fast in crowded places, the light can be actuated to warn them slow down
+- Vibration：combined with GPS and give the disabled command of directions through either a vibration actuator or a speaker actuator
+- speaker:  To give verbal guidance for disabled people when the wheelchair is detected to be too close to surrounding objects.
+- Light (LED): When the wheelchair goes too fast in crowded places, the light can be actuated to warn them slow down
 
 
 
