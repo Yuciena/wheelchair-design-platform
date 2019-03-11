@@ -181,11 +181,11 @@ void loop(void)
     if(distance_value  < 20  || distance_value > 150 ) // We will ignore values outside the range of measurement, this will happen around 2.7 -0.4 v
     return;
 
-  Serial.print("Distance: ");
-  Serial.print(value);
-  Serial.print(" (0 - 1023) steps,  ");
-  Serial.print(voltage_value);
-  Serial.print(" (v),  ");
+//  Serial.print("Distance: ");
+//  Serial.print(value);
+//  Serial.print(" (0 - 1023) steps,  ");
+//  Serial.print(voltage_value);
+//  Serial.print(" (v),  ");
   Serial.print(distance_value);
   Serial.println(" cm.");
 
@@ -195,17 +195,18 @@ void loop(void)
   /* Command is sent when \n (\r) or println is called */
   /* AT+GATTCHAR=CharacteristicID,value */
 
-  ble.print( F("AT+GATTCHAR=") );
-  ble.print( orientationCharId );
-  ble.print( F(",") );
+//  ble.print( F("AT+GATTCHAR=") );
+//  ble.print( orientationCharId );
+//  ble.print( F(",") );
   ble.println(distance_value);
+  
 
 
   /* Check if command executed OK */
-  if ( !ble.waitForOK() )
-  {
-    Serial.println(F("Failed to get response!"));
-  }
+//  if ( !ble.waitForOK() )
+//  {
+//    Serial.println(F("Failed to get response!"));
+//  }
 
   /* Delay before next measurement update */
   //delay(1000);
