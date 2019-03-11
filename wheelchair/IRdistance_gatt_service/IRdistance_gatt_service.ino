@@ -208,7 +208,7 @@ void loop(void)
   }
 
   /* Delay before next measurement update */
-  delay(1000);
+  //delay(1000);
 }
 
 
