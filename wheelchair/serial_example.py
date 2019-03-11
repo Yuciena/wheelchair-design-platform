@@ -1,11 +1,9 @@
-
 # This example shows how to establish a connection
 # with the DCD HUB using the credentials of a thing,
 # and start reading the serial port to transfer the data.
 
 # This is a typical case for a Python transferring data
 # from an Arduino-like device.
-
 
 # Import required library
 from dotenv import load_dotenv
@@ -22,6 +20,7 @@ THING_TOKEN = os.environ['THING_TOKEN']
 
 # Instantiate a thing with its credential
 my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
+print(my_thing.name)
 
 # We can read the details of our thing,
 # i.e. retrieving its information from the hub
@@ -38,7 +37,6 @@ ser = serial.Serial(
 def serial_to_property_values():
     # Read one line
     line_bytes = ser.readline()
-    print(line_bytes)
     # If the line is not empty
     if len(line_bytes) > 0:
         # Convert the bytes into string
@@ -49,9 +47,6 @@ def serial_to_property_values():
         property_id = values.pop(0)
         # Get the property from the thing
         prop = my_thing.properties[property_id]
-
-        # print(property_id)
-        # print(prop)
         # If we find the property, we update the values (rest of the list)
         if prop is not None:
             prop.update_values([float(x) for x in values])
