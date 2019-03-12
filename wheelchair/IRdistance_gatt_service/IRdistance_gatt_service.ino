@@ -195,9 +195,9 @@ void loop(void)
   /* Command is sent when \n (\r) or println is called */
   /* AT+GATTCHAR=CharacteristicID,value */
 
-//  ble.print( F("AT+GATTCHAR=") );
-//  ble.print( orientationCharId );
-//  ble.print( F(",") );
+  ble.print( F("AT+GATTCHAR=") );
+  ble.print( orientationCharId );
+  ble.print( F(",") );
   ble.println(distance_value);
   
 
