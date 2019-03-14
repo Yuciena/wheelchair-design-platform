@@ -3,7 +3,7 @@
 
 #define LED_PIN 11 // Defining the pin of the arduino that sends the data stream.
 
-Adafruit_NeoPixel LED_controller = Adafruit_NeoPixel( 1, LED_PIN, NEO_RGB + NEO_KHZ800); 
+Adafruit_NeoPixel LED_controller = Adafruit_NeoPixel( 1, LED_PIN, NEO_RGB + NEO_KHZ800);
 // This is a class that will control your NeoPixel LEDs
 //( NUMBER OF LEDS Connected, PIN NUMBER, LED TYPE, IN OUR CASE NEO_RGB + NEO_KHZ800),
 // NEO_KHZ800 just mentions the 800 KHz support, no need to change for most cases.
@@ -33,7 +33,7 @@ void loop() {
 
   LED_controller.show(); // Sending updated pixel color to the hardware
 
-  if(counter >= 0xFFFFFF) counter = 0; // once we go over the the maximum value 255 255 255, we go back to 0 
+  if(counter >= 0xFFFFFF) counter = 0; // once we go over the the maximum value 255 255 255, we go back to 0
   counter+= 10000;
   counter&= 0xFFFFFF; // bit mask to only keep the first 24bits
 
