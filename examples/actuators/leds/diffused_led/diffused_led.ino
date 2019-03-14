@@ -1,7 +1,7 @@
 #include <Adafruit_NeoPixel.h> // Necessary Library include
 
 
-#define LED_PIN 2 // Defining the pin of the arduino that sends the data stream.
+#define LED_PIN 11 // Defining the pin of the arduino that sends the data stream.
 
 Adafruit_NeoPixel LED_controller = Adafruit_NeoPixel( 1, LED_PIN, NEO_RGB + NEO_KHZ800); 
 // This is a class that will control your NeoPixel LEDs
@@ -19,22 +19,22 @@ void setup() {
 }
 
 void loop() {
-  //( led number, R, G , and B values, for the color function)
-  // .setPixelColor takes the led and the color. you can also use .color, you can find an example commented
-  // .Color() takes values from 0, 0, 0, to 255, 255, 255
+//  ( led number, R, G , and B values, for the color function)
+//   .setPixelColor takes the led and the color. you can also use .color, you can find an example commented
+ //  .Color() takes values from 0, 0, 0, to 255, 255, 255
 
   // This Example goes through some of all the possible RGB Values!
   // careful , theset pixel color uses INDICES for the LEDS , so it starts at 0
-//  LED_controller.setPixelColor( 0, 0xFFFFFF);
-  // another example of setting a particular color
-  // LED_controller.setPixelColor( 1, LED_controller.Color( 0, 150, 0 ) ); // Green!
-//  Serial.print(" RGB Color ( 0x000000 to 0xFFFFFF):  ");
-//  Serial.println(counter, HEX);
+ LED_controller.setPixelColor( 0, 0xFFFFFF);
+//   another example of setting a particular color
+   LED_controller.setPixelColor( 1, LED_controller.Color( 0, 150, 0 ) ); // Green!
+  Serial.print(" RGB Color ( 0x000000 to 0xFFFFFF):  ");
+  Serial.println(counter, HEX);
 
   LED_controller.show(); // Sending updated pixel color to the hardware
 
-//  if(counter >= 0xFFFFFF) counter = 0; // once we go over the the maximum value 255 255 255, we go back to 0 
-//  counter+= 10000;
-//  counter&= 0xFFFFFF; // bit mask to only keep the first 24bits
+  if(counter >= 0xFFFFFF) counter = 0; // once we go over the the maximum value 255 255 255, we go back to 0 
+  counter+= 10000;
+  counter&= 0xFFFFFF; // bit mask to only keep the first 24bits
 
 }

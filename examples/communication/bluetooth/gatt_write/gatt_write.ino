@@ -49,7 +49,7 @@ Adafruit_BluefruitLE_SPI ble(BLUEFRUIT_SPI_CS, BLUEFRUIT_SPI_IRQ, BLUEFRUIT_SPI_
 int32_t charid_led;
 
 // Neo Pixel
-#define LED_PIN 6
+#define LED_PIN 11
 Adafruit_NeoPixel LED_controller = Adafruit_NeoPixel( 1, LED_PIN, NEO_RGB + NEO_KHZ800); 
 uint8_t R = 0, G = 0, B = 0;
 
@@ -140,4 +140,3 @@ void loop(void) {
   // Check every 200ms for new command receive from Bluetooth
   ble.update(200);
 }
-
