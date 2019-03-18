@@ -127,10 +127,10 @@ void setup(void) {
 
 void orientation() {
   // Get Quaternion data (no 'Gimbal Lock' like with Euler angles)
-  imu::Quaternion quat = bno.getQuat();
-  float quatX = quat.x();
-  float quatY = quat.y();
-  float quatZ = quat.z();
+  imu::Vector<3> euler_vector = bno.getVector(Adafruit_BNO055::VECTOR_EULER);
+  float quatX = euler_vector.x();
+  float quatY = euler_vector.y();
+  float quatZ = euler_vector.z();
 
   // Command is sent when \n (\r) or println is called
   // AT+GATTCHAR=CharacteristicID,value
