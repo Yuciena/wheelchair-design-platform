@@ -72,7 +72,7 @@ int32_t orientationCharId;
 */
 /**************************************************************************/
 
-#define IR_PIN  A0                       // Setting up pin to receive voltage from IR
+#define IR_PIN  A2                       // Setting up pin to receive voltage from IR
 
 int value, prev_value = - 10000;         // int values (read from analog port, both the current and the previous)
 int deviation = 0;                       // setting the minimum deviation between the measurements (0 by default)
@@ -209,7 +209,7 @@ void loop(void)
 //  }
 
   /* Delay before next measurement update */
-  //delay(1000);
+  //delay(100);
 }
 
 
