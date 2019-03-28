@@ -6,7 +6,7 @@
 
 # Import required library
 from random import random
-import time
+import time 
 
 from dotenv import load_dotenv
 import os
