@@ -16,18 +16,24 @@ Ikea customers, wheelchair company, Ikea stuff, Ikea trolley, furnitures etc.
 Entrance → Find Elevator and find routes(GPS) → Visit sample room(Proximity / Vibration / Speaker / Camera) → Scan the barcode of furniture → Look for the furniture in the warehouse(Proximity / Bluetooth / Button) → Checkout
 
 ### Sensors:
-#### - GPS：
+#### - GPS (Beacon)：
 Navigate the visiting routes and to specific areas inside of the IKEA building in order to help the disabled find the right places where they want to visit. (Network detection in building with beacons?)
-- Proximity sensors: detect surrounding objects and people in order to avoid accidents when navigating through the shop. This sensor can also be used for a follow-me system build in the trolley, which can follow the wheelchair, so that the wheelchair user does not have to push the trolley.
-- Accelerator sensor to detect whether the wheelchair user is going to fast (in combination with proximity; going to fast into direction of an object/person)
-- Button: activate the button and send the signal to the IKEA staff that they need help when they cannot get the stuff by themselves
+#### - Proximity sensors:
+Detect surrounding objects and people in order to avoid accidents when navigating through the shop. This sensor can also be used for a follow-me system build in the trolley, which can follow the wheelchair, so that the wheelchair user does not have to push the trolley.
+#### - Accelerator sensor
+To detect whether the wheelchair user is going to fall. For example when riding on a slope or over a bump the wheelchair might get tilted.
+#### - Button:
+Activate the button and send the signal to the IKEA staff that they need help when they cannot get the stuff by themselves
 
-Assignment 2:
+## Assignment 2:
 
-Actuator:
-- Vibration：combined with GPS and give the disabled command of directions through either a vibration actuator or a speaker actuator
-- speaker:  To give verbal guidance for disabled people when the wheelchair is detected to be too close to surrounding objects.
-- Light (LED): When the wheelchair goes too fast in crowded places, the light can be actuated to warn them slow down
+### Actuator:
+#### - Vibration：
+Combined with GPS and give the disabled command of directions through either a vibration actuator or a speaker actuator
+#### - speaker:  
+To give verbal guidance for disabled people when the wheelchair is detected to be too close to surrounding objects.
+#### - Light (LED):
+The light is showing the wheelchair user whether the wheelchair is tilted to much: (risk of falling)
 
 
 
