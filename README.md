@@ -16,7 +16,7 @@ Ikea customers, wheelchair company, Ikea stuff, Ikea trolley, furnitures etc.
 Entrance → Find Elevator and find routes(GPS) → Visit sample room(Proximity / Vibration / Speaker / Camera) → Scan the barcode of furniture → Look for the furniture in the warehouse(Proximity / Bluetooth / Button) → Checkout
 
 ### Sensors:
-#### - GPS (Beacon)：
+#### - GPS (Beacon) = not implemented：
 Navigate the visiting routes and to specific areas inside of the IKEA building in order to help the disabled find the right places where they want to visit. (Network detection in building with beacons?)
 #### - Proximity sensors:
 Detect surrounding objects and people in order to avoid accidents when navigating through the shop. This sensor can also be used for a follow-me system build in the trolley, which can follow the wheelchair, so that the wheelchair user does not have to push the trolley.
@@ -30,10 +30,41 @@ Activate the button and send the signal to the IKEA staff that they need help wh
 ### Actuator:
 #### - Vibration：
 Combined with GPS and give the disabled command of directions through either a vibration actuator or a speaker actuator
-#### - speaker:  
+#### - speaker = not implemented:  
 To give verbal guidance for disabled people when the wheelchair is detected to be too close to surrounding objects.
 #### - Light (LED):
 The light is showing the wheelchair user whether the wheelchair is tilted to much: (risk of falling)
+
+## Files in the directory 'wheelchair':
+
+### bno055_gatt_service
+This code is run on the Blue Feather to detect the orientation from the orientation sensor.
+It writes the data to both the serial port of the laptop and the serial port of the bluetooth device. Anyone who subscribes to the bluetooth device can see the data.
+
+### IRDistance_gatt_service
+This code is run on the Blue Feather to detect the distance of an object to the proximity sensor.
+It writes the data to both the serial port of the laptop and the serial port of the bluetooth device. Anyone who subscribes to the bluetooth device can see the data.
+
+### push_button_led_log
+This code is run on an arduino board to detect whether the button is pressed or not. If the button is pressed =, the LED goes on. If the button is not pressed the LED will be off. This code has been copied from the arduino example folder of the main repository to explore how activity of a
+button can be detected and how to send a signal to the LED. For the project this code can be broken down into the a piece for warning the IKEA staff (button) and warning the user of the risk of falling (LED).
+
+### dcd_hub.py
+This code has been used to test the connection with the server used for this project. It will indicate whether the connection has been established successfully or not.
+
+### get_started.py
+This code has been used to test whether we were able to receive data on Grafana, a data visualisation tool connected to the dcd_hub (server). It generates a random property with a unique ID, which can be used to identify the property on Grafana.
+
+### serial_example.py
+This code is meant to read data from the serial port of your laptop and send it to the server, so that it can be visualised on Grafana.
+
+### subscribe_gatt_orientation.py
+This code is run on the raspberry pi to subscribe the pi to the Blue Feather. The raspberry pi will read the data from the orientation sensor that the Feather is sending and then the pi sends it to the dcd_hub server, so that it can be visualised on grafana.
+
+### subscribe_gatt_proximity.py
+This code is run on the raspberry pi to subscribe the pi to the Blue Feather. The raspberry pi will read the data from the proximity sensor that the Feather is sending and then the pi sends it to the dcd_hub server, so that it can be visualised on grafana.
+
+### ml/1_collect_and_label.py
 
 
 
