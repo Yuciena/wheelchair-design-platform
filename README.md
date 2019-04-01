@@ -65,9 +65,10 @@ This code is run on the raspberry pi to subscribe the pi to the Blue Feather. Th
 This code is run on the raspberry pi to subscribe the pi to the Blue Feather. The raspberry pi will read the data from the proximity sensor that the Feather is sending and then the pi sends it to the dcd_hub server, so that it can be visualised on grafana.
 
 ### ml/1_collect_and_label.py
+...
 
 
-
+# Wheelchair Design Platform
 
 Wheelchair Design Platform is a repository that contains some resources to help
 designers and developers speak the same language, and work together towards
