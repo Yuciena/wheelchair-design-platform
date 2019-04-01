@@ -1,19 +1,23 @@
 
 # Magic Wheelchair
 
-Assignment 1
+## Assignment 1
 
-Context: the disabled buying furniture in IKEA by themselves
+### Context:
+the disabled buying (small) furniture in IKEA by themselves
 
-User: Needs to navigate through the shop, which has very narrow pathways and is often very crowded. This makes it difficult to manoeuvre through the shop. Also finding and using the trolley to pick up products becomes a problem since the user cannot push it forward. Then in the storage pickup, the user often cannot reach the products on the shelf and needs help from the staff.
+### User:
+Needs to navigate through the shop, which has very narrow pathways and is often very crowded. This makes it difficult to manoeuvre through the shop. Also finding and using the trolley to pick up products becomes a problem since the user cannot push it forward. Then in the storage pickup, the user often cannot reach the products on the shelf and needs help from the staff.
 
-Stakeholders: Ikea customers, wheelchair company, Ikea stuff, Ikea trolley, furnitures etc.
+### Stakeholders:
+Ikea customers, wheelchair company, Ikea stuff, Ikea trolley, furnitures etc.
 
-Ikea Journey on The Wheelchair Alone / Ikea Magic Wheelchair:
+### Ikea Journey on The Wheelchair Alone / Ikea Magic Wheelchair:
 Entrance → Find Elevator and find routes(GPS) → Visit sample room(Proximity / Vibration / Speaker / Camera) → Scan the barcode of furniture → Look for the furniture in the warehouse(Proximity / Bluetooth / Button) → Checkout
 
-Sensors:
-- GPS：Navigate the visiting routes and to specific areas inside of the IKEA building in order to help the disabled find the right places where they want to visit. (Network detection in building with beacons?)
+### Sensors:
+#### - GPS：
+Navigate the visiting routes and to specific areas inside of the IKEA building in order to help the disabled find the right places where they want to visit. (Network detection in building with beacons?)
 - Proximity sensors: detect surrounding objects and people in order to avoid accidents when navigating through the shop. This sensor can also be used for a follow-me system build in the trolley, which can follow the wheelchair, so that the wheelchair user does not have to push the trolley.
 - Accelerator sensor to detect whether the wheelchair user is going to fast (in combination with proximity; going to fast into direction of an object/person)
 - Button: activate the button and send the signal to the IKEA staff that they need help when they cannot get the stuff by themselves
