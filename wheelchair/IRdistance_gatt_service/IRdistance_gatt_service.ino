@@ -35,6 +35,8 @@
   #include <SoftwareSerial.h>
 #endif
 
+#define VIB_PIN 10
+
 // Create the bluefruit object, either software serial...uncomment these lines
 /*
 SoftwareSerial bluefruitSS = SoftwareSerial(BLUEFRUIT_SWUART_TXD_PIN, BLUEFRUIT_SWUART_RXD_PIN);
@@ -81,6 +83,8 @@ double voltage_value, distance_value;    // Converted to Voltage
 
 void setup(void)
 {
+  pinMode(VIB_PIN, OUTPUT);
+  
   while (!Serial); // required for Flora & Micro
   delay(500);
 
@@ -178,8 +182,17 @@ void loop(void)
                                                        // solve with software, however. (if previous results are close to 20 and its going down)
                                                        // then do something.... to ignore results, perhaps.
 
-    if(distance_value  < 20  || distance_value > 150 ) // We will ignore values outside the range of measurement, this will happen around 2.7 -0.4 v
+    if(distance_value  < 10  || distance_value > 150 ) // We will ignore values outside the range of measurement, this will happen around 2.7 -0.4 v
     return;
+
+ if(distance_value > 10 && distance_value < 45)
+ Closeby();
+
+ if(distance_value > 45 && distance_value < 90)
+ MediumFar();
+
+ if(distance_value > 90 && distance_value < 150)
+ FarAway();
 
 //  Serial.print("Distance: ");
 //  Serial.print(value);
@@ -213,6 +226,41 @@ void loop(void)
 }
 
 
+void Closeby()
+{
+  int i = 255;
+  i-=10;  // incrementing the power of the vibration motor
+  
+  if( i < 175) 
+    i = 255;
+
+    analogWrite(VIB_PIN, i);
+    delay(i*10); // in each step of pwm, we vibrate for i * 0.01 seconds
+}
+
+void MediumFar()
+{
+  int i = 165;
+  i-=10;  // incrementing the power of the vibration motor
+  
+  if( i < 80) 
+    i = 165;
+
+    analogWrite(VIB_PIN, i);
+    delay(i*10); // in each step of pwm, we vibrate for i * 0.01 seconds
+}
+
+void FarAway()
+{
+  int i = 70;
+  i-=10;  // incrementing the power of the vibration motor
+  
+  if( i < 0) 
+    i = 70;
+
+    analogWrite(VIB_PIN, i);
+    delay(i*10); // in each step of pwm, we vibrate for i * 0.01 seconds
+}
 
 double convert_to_distance( double voltage)
 {
