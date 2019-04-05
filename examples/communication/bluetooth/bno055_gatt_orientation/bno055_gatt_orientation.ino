@@ -126,11 +126,11 @@ void setup(void) {
 
 void orientation() {
   // Get Euler angle data
-  imu::Vector<3> euler_vector = bno.getVector(Adafruit_BNO055::VECTOR_EULER)
+  imu::Vector<3> euler_vector = bno.getVector(Adafruit_BNO055::VECTOR_EULER);
   float angleX = euler_vector.x();
   float angleY = euler_vector.y();
   float angleZ = euler_vector.z();
-  
+
   // Command is sent when \n (\r) or println is called
   // AT+GATTCHAR=CharacteristicID,value
   ble.print( F("AT+GATTCHAR=") );
