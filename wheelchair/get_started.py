@@ -6,13 +6,13 @@
 
 # Import required library
 from random import random
-import time 
+import time
 
 from dotenv import load_dotenv
 import os
 
 from dcd.entities.thing import Thing
-from dcd.entities.property_type import PropertyType
+from dcd.entities.property import PropertyType
 
 # The thing ID and access token
 load_dotenv()
@@ -31,12 +31,12 @@ my_thing.read()
 print(my_thing.to_json())
 
 # If we have no properties, let's create a random one
-if len(my_thing.properties) == 0:
+if my_thing.find_property_by_name("IkeaP") is None:
     # By specifying a property type, the DCD Hub will
     # automatically generate the property dimensions
     # (in this case, 3 generic dimensions)
     my_property = my_thing.create_property(
-        name="My Random Property",
+        name="IkeaP",
         property_type=PropertyType.THREE_DIMENSIONS)
 
     # Let's have a look at the property, it should
@@ -48,7 +48,10 @@ if len(my_thing.properties) == 0:
 # WARNING: if you name two property with the same name, the Hub will
 # create them both, but this function will randomly return the first
 # it finds.
-my_property = my_thing.find_property_by_name("My Random Property")
+my_property = my_thing.find_property_by_name("IkeaP")
+
+print(my_property.to_json())
+
 
 # Let's create a function that generate random values
 def generate_dum_property_values(the_property):
