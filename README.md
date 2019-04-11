@@ -94,7 +94,7 @@ powers the Raspberry Pi. The Arduino Mega communicates and receives power from t
 Raspberry Pi via USB. A Feather (Arduino-like development board) on the wheel connects to
 the Raspberry Pi via Bluetooth to sense and actuate from the wheel.
 
-![Main Wheelchair components](/docs/workshops/images/wheechair-components.png)
+![Main Wheelchair components](/docs/resources/images/architecture.jpg)
 
 
 ## Files in the directory 'wheelchair':
