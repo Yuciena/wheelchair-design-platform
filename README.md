@@ -32,9 +32,6 @@ You can see our video here: https://www.youtube.com/watch?v=OvhNTrp6YjQ&t=57s
 
 ![IoT1 Exhibition](/docs/resources/images/poster.jpg)
 =======
-![IoT1 Exhibition](/docs/workshops/images/poster a1-01.jpg)
->>>>>>> fdbbd994d339afc9843c6f748030f1e5ccfeab80
->>>>>>> b4df906ad302ae56cc51b7c3f828dfa9cf5c34c9
 
 ### Sensors:
 #### - Sensor1: Proximity
