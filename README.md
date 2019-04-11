@@ -1,6 +1,6 @@
 
 # Magic Wheelchair
-##Connected smart wheelchair for ikea customers
+## Connected smart wheelchair for ikea customers
 
 ## Assignment 1
 
