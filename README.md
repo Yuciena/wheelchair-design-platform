@@ -28,13 +28,10 @@ Ikea customers, wheelchair company, Ikea staff, furnitures etc.
 Entrance → Find Elevator and find routes(GPS) → Visit sample room(Proximity / Vibration / Speaker / Camera) → Scan the barcode of furniture → Look for the furniture in the warehouse(Proximity / Bluetooth / Button) → Checkout
 
 ### Poster and video
-<<<<<<< HEAD
 You can see our video here: https://www.youtube.com/watch?v=OvhNTrp6YjQ&t=57s
-=======
-You can see our video here: https://www.youtube.com/watch?v=OvhNTrp6YjQ
 
-![IoT1 Exhibition](/docs/workshops/images/poster a1-01.jpg)
->>>>>>> fdbbd994d339afc9843c6f748030f1e5ccfeab80
+![IoT1 Exhibition](/docs/resources/images/poster.jpg)
+=======
 
 ### Sensors:
 #### - Sensor1: Proximity
@@ -92,6 +89,55 @@ Location: between Adafruit Bluefruit and Powerbank
 ### USB B CABLE
 Location: between Raspberry Pi and powerbank.
 
+
+## Main Components
+
+The main design includes a Raspberry Pi 3 and an Arduino Mega 2560 on the wheelchair frame.
+
+The Arduino Mega is the micro-controller of the platform. Fixed on the main frame of the wheelchair,
+it can collect data from sensors (e.g. force sensors, accelerometers), and trigger actions from actuators
+(e.g. LEDs, vibration motors).
+
+More on the Arduino Mega can be found [here](/docs/resources/arduino.md "Arduino resources").
+
+Raspberry Pi is a small computer. It is also fixed to the main frame of the wheelchair,
+where it can:
+* interact with the Arduino Mega via USB to receive data and transmit commands;
+* interact with the Internet to transmit commands and receive data;
+* store data locally in files;
+* run (machine learning) algorithms.
+
+More on the Raspberry Pi can be found [here](/docs/resources/raspberrypi.md "Raspberry Pi resources").
+
+These components fit together as shown on the following diagram. A large powerbank
+powers the Raspberry Pi. The Arduino Mega communicates and receives power from the
+Raspberry Pi via USB. A Feather (Arduino-like development board) on the wheel connects to
+the Raspberry Pi via Bluetooth to sense and actuate from the wheel.
+
+![Main Wheelchair components](/docs/workshops/images/wheechair-components.png)
+
+## Step-by-step instructions
+#### Create a project and repository in Github and clone repository
+#### Sign up on the Data-Centric Design Hub and install the dependencies in Atom
+Create a thing in DCD hub and generates an access token for your Thing. This Python dependency is a communication protocol to talk to the DCD hub.
+#### Set environmental variables
+Find the .env file and set the thing id and token
+#### Connect your raspberry pi to the network
+Plug in the Micro SD card into your laptop, create a file for setting up your network details and connect the pi to the power bank
+#### Log into the Pi with ssh and clone the repository on your Pi
+#### Set the thing Id and token on your Pi
+#### Install Python dependencies on the Pi
+#### Install feather dependencies in Python
+#### Download libraries in Arduino
+<open Arduino<Sketch<included library<manage libraries<search and download Adafruit BNO055, Adafruit BluefruitLE nRF51
+#### Open and upload the file (arduino_prox_vibr.info) from github and open in Arduino Mega
+#### Open the file of bno055_gatt_service.ino, set the name of the feather and Setup Orientation GATT service with UUID
+#### Upload the file(bno055_gatt_service.ino) to the feather
+#### Find the MAC address of your feather and add it to the .env file
+#### Put the main components on the wheelchair and wire the components
+see the previous chapter (Components)
+#### Run the code from the file of subscrib_gatt_orientation.py 
+#### GO to Grafana, select the property ID and set the value of your data and then you can see the data visualization in Grafana
 
 
 ## Files in the directory 'wheelchair':
@@ -161,34 +207,7 @@ get started, you can find some additional resources
 
 * [Git manipulation such as Pull Request](/docs/resources/git.md "Git manipulation").
 
-## Main Components
 
-__**Disclaimer:**__ the design of this platform focuses on flexibility and
-technology exploration rather than optimisation.
-
-The main design includes a Raspberry Pi 3 and an Arduino Mega 2560 on the wheelchair frame.
-
-The Arduino Mega is the micro-controller of the platform. Fixed on the main frame of the wheelchair,
-it can collect data from sensors (e.g. force sensors, accelerometers), and trigger actions from actuators
-(e.g. LEDs, vibration motors).
-
-More on the Arduino Mega can be found [here](/docs/resources/arduino.md "Arduino resources").
-
-Raspberry Pi is a small computer. It is also fixed to the main frame of the wheelchair,
-where it can:
-* interact with the Arduino Mega via USB to receive data and transmit commands;
-* interact with the Internet to transmit commands and receive data;
-* store data locally in files;
-* run (machine learning) algorithms.
-
-More on the Raspberry Pi can be found [here](/docs/resources/raspberrypi.md "Raspberry Pi resources").
-
-These components fit together as shown on the following diagram. A large powerbank
-powers the Raspberry Pi. The Arduino Mega communicates and receives power from the
-Raspberry Pi via USB. A Feather (Arduino-like development board) on the wheel connects to
-the Raspberry Pi via Bluetooth to sense and actuate from the wheel.
-
-![Main Wheelchair components](/docs/workshops/images/wheechair-components.png)
 
 ## List of suggested components:
 
