@@ -97,7 +97,7 @@ the Raspberry Pi via Bluetooth to sense and actuate from the wheel.
 
 ![Main Wheelchair components](/docs/workshops/images/wheechair-components.png)
 
-### Step-by-step instructions
+## Step-by-step instructions
 #### Create a project and repository in Github and clone repository
 #### Sign up on the Data-Centric Design Hub
 Create a thing in DCD hub and generates an access token for your Thing.
@@ -117,7 +117,12 @@ Put the Aurdino Mega, power bank, Feather and orientation sensor with breadboard
 Put the proximity sensor on the back of the wheelchair; 
 Put the vibration actuator on the front of the wheelchair where users can detect the vibration while leaning on it.
 #### Wire the components ======> link to how to wire the hardware FIXMEXXXX
+#### Setup Orientation GATT service with UUID
+#### GO to Grafana, select the property ID and set the value of your data
+#### Subscribe to the GATT service from the Raspberry Pi and run the code of XXXXXX
 #### 
+
+
 
 
 
