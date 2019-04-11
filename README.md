@@ -99,22 +99,21 @@ the Raspberry Pi via Bluetooth to sense and actuate from the wheel.
 
 ## Step-by-step instructions
 #### Create a project and repository in Github and clone repository
-#### Sign up on the Data-Centric Design Hub
-Create a thing in DCD hub and generates an access token for your Thing.
-#### connect your raspberry pi to the network
+#### Sign up on the Data-Centric Design Hub and install the dependencies in Atom
+Create a thing in DCD hub and generates an access token for your Thing. This Python dependency is a communication protocol to talk to the DCD hub.
+#### Connect your raspberry pi to the network
 Plug in the Micro SD card into your laptop, create a file for setting up your network details and connect the pi to the power bank
-#### Log into the Pi and clone the repository on your Pi
-#### Install Python dependencies 
-This Python dependency is a communication protocol to talk to the DCD hub.
+#### Log into the Pi with ssh and clone the repository on your Pi
+#### Set the thing Id and token on your Pi
+#### Install Python dependencies on the Pi
 #### Set environmental variables
-Find the env. file and set the thing id and token
+Find the .env file and set the thing id and token
 #### Put the main components on the wheelchair and wire the components
 #### Download and upload the file (arduino_prox_vibr.info) from github and open in Arduino Mega
 #### Download libraries in Arduino
 <open Arduino<Sketch<included library<manage libraries<search and download Adafruit BNO055, Adafruit BluefruitLE nRF51
 #### Set the name of the feather and Setup Orientation GATT service with UUID(bno055_gatt_service.ino)
 #### Open and upload the file(bno055_gatt_service.ino) to the feather
-#### Log into the Pi with ssh
 #### Run the code from the file of subscrib_gatt_orientation.py to the Raspberry Pi
 
 see the previous chapter (Components)
