@@ -58,13 +58,39 @@ Combined with the network detection sensor, the speaker guides the disabled dire
 Flashing the light to warn the risk of flipping over when the angle of the wheelchair dumping to one side is too large.
 
 
-## How to wire the hardware
+## components
 
-### connect the orientation sensor to the Blue Feather
-![IoT1 Exhibition](/docs/resources/images/orientation_2.png)
+### ARDUINO MEGA
+Location: the wheelchair main frame
+Script:	arduino_prox_vibr.ino
+Connected to: Vibration motor (Physical, wires) on the back of the wheelchair seat | Powerbank (Physical, USB B)
 
-### connect the vibration motor to the Arduino Omega
-![IoT1 Exhibition](/docs/resources/images/vibration_2.png) 
+### ADAFRUIT FEATHER BLUEFRUIT 32u4
+Location: breadboard on the wheelchair main frame
+Script: bno055_gatt_service.ino
+Connected to: RASPBERRY PI (Bluetooth connection)  | BNO055 (Physical, wires) | POWERBANK (Physical, Micro USB)
+
+### RASPBERRY PI
+Location: the wheelchair main frame
+Script: subscribe_gatt_orientation0.py
+Connected to: POWERBANK (Physical, Micro USB)
+
+### BNO055 IMU x2
+Location: breadboard on the wheelchair main frame
+Connected to:	ADAFRUIT FEATHER (Physical, wires)
+
+### POWERBANK x3
+Location:	3x the wheelchair main frame
+Connected to:	RASPBERRY PI (Physical, USB) | ADAFRUIT FEATHER (Physical, Micro USB) | ARDUINO MEGA (Physical, USB B)
+
+### USB CABLE
+Location: between Raspberry Pi and Powerbank
+
+### MICRO USB CABLE
+Location: between Adafruit Bluefruit and Powerbank
+
+### USB B CABLE
+Location: between Raspberry Pi and powerbank.
 
 
 
