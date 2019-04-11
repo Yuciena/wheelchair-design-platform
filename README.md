@@ -1,20 +1,34 @@
 
 # Magic Wheelchair
-## Connected smart wheelchair for ikea customers
+### Connected smart wheelchair for IKEA customers
 
-## Assignment 1
+### Purpose of your prototype
+“Make the IKEA shopping experience accessible for the customers on wheelchairs”
 
 ### Context:
 the disabled buying (small) furniture in IKEA by themselves
 
-### User:
-Needs to navigate through the shop, which has very narrow pathways and is often very crowded. This makes it difficult to manoeuvre through the shop. Also finding and using the trolley to pick up products becomes a problem since the user cannot push it forward. Then in the storage pickup, the user often cannot reach the products on the shelf and needs help from the staff.
+## Brief context
+IKEA vision:
+“To create a better everyday life for the many people”
+
+### Current situation
+IKEA stores are huge. These sprawling stores easily take up the length of a football field. It also has very narrow pathways and is often very crowded.Therefore, this makes it difficult to manoeuvre through the shop. In the storage pickup, customers often cannot reach the products on the shelf and need help from IKEA staff. Things are more severe for the customers on the wheelchairs.
+
+### Our vision:
+For the considerable size of IKEA, having electric powered wheelchairs with gps navigations on them would make it easier for the customers on wheelchairs to get around;
+To help customers be aware of the surrounding situations when they are going around would make their IKEA journey more guaranteed;
+To warn customers the risk of flipping over simultaneously could ensure a safe and friendly IKEA journey;
+To provide help whenever it is needed.
 
 ### Stakeholders:
-Ikea customers, wheelchair company, Ikea stuff, Ikea trolley, furnitures etc.
+Ikea customers, wheelchair company, Ikea staff, furnitures etc.
 
 ### Ikea Journey on The Wheelchair Alone / Ikea Magic Wheelchair:
 Entrance → Find Elevator and find routes(GPS) → Visit sample room(Proximity / Vibration / Speaker / Camera) → Scan the barcode of furniture → Look for the furniture in the warehouse(Proximity / Bluetooth / Button) → Checkout
+
+### Poster and video
+You can see our video here: https://www.youtube.com/watch?v=OvhNTrp6YjQ&t=57s
 
 ### Sensors:
 #### - Sensor1: Proximity
@@ -28,11 +42,6 @@ To detect the Z axis of the wheelchair and to predict/give warning whether it is
 Activate the button and send the signal to the IKEA staff that they need help when they cannot reach products on the shelf.
 
 
-
-
-
-
-## Assignment 2:
 
 ### Actuator:
 #### - Actuator 2: Vibration
