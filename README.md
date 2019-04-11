@@ -101,23 +101,24 @@ the Raspberry Pi via Bluetooth to sense and actuate from the wheel.
 #### Create a project and repository in Github and clone repository
 #### Sign up on the Data-Centric Design Hub
 Create a thing in DCD hub and generates an access token for your Thing.
+#### connect your raspberry pi to the network
+Plug in the Micro SD card into your laptop, create a file for setting up your network details and connect the pi to the power bank
+#### Log into the Pi and clone the repository on your Pi
 #### Install Python dependencies 
 This Python dependency is a communication protocol to talk to the DCD hub.
 #### Set environmental variables
-It is to read the id and access token of our thing
-#### Find and download the files (##fixme) from github and open in Arduino
+Find the env. file and set the thing id and token
+#### Put the main components on the wheelchair and wire the components
+#### Download and upload the file (arduino_prox_vibr.info) from github and open in Arduino Mega
 #### Download libraries in Arduino
-<open Arduino<Sketch<included library<manage libraries<search and download Adafruit BNO055, Adafruit BluefruitLE nRF51 #FIXME Proximity
-#### Upload *** to the Arduino
-#### Upload *** to the feather
-#### Upload *** to the Raspberry Pi
-#### Put the main components on the wheelchair
-Put the Raspberry Pi and power bank to the right of wheelchair main frame; 
-Put the Aurdino Mega, power bank, Feather and orientation sensor with breadboard to the left of wheelchair main frame; 
-Put the proximity sensor on the back of the wheelchair; 
-Put the vibration actuator on the front of the wheelchair where users can detect the vibration while leaning on it.
-#### Wire the components ======> link to how to wire the hardware FIXMEXXXX
-#### Setup Orientation GATT service with UUID
+<open Arduino<Sketch<included library<manage libraries<search and download Adafruit BNO055, Adafruit BluefruitLE nRF51
+#### Set the name of the feather and Setup Orientation GATT service with UUID(bno055_gatt_service.ino)
+#### Open and upload the file(bno055_gatt_service.ino) to the feather
+#### Log into the Pi with ssh
+#### Run the code from the file of subscrib_gatt_orientation.py to the Raspberry Pi
+
+see the previous chapter (Components)
+
 #### GO to Grafana, select the property ID and set the value of your data
 #### Subscribe to the GATT service from the Raspberry Pi and run the code of XXXXXX
 #### 
