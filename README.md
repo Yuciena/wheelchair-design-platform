@@ -27,14 +27,18 @@ Ikea customers, wheelchair company, Ikea staff, furnitures etc.
 ### Ikea Journey on The Wheelchair Alone / Ikea Magic Wheelchair:
 Entrance → Find Elevator and find routes(GPS) → Visit sample room(Proximity / Vibration / Speaker / Camera) → Scan the barcode of furniture → Look for the furniture in the warehouse(Proximity / Bluetooth / Button) → Checkout
 
-### Video and poster
-
-#### Video
+### Poster and video
+<<<<<<< HEAD
+You can see our video here: https://www.youtube.com/watch?v=OvhNTrp6YjQ&t=57s
+=======
 You can see our video here: https://www.youtube.com/watch?v=OvhNTrp6YjQ
 
-#### Poster
+<<<<<<< HEAD
 ![IoT1 Exhibition](/docs/resources/images/poster.jpg)
-
+=======
+![IoT1 Exhibition](/docs/workshops/images/poster a1-01.jpg)
+>>>>>>> fdbbd994d339afc9843c6f748030f1e5ccfeab80
+>>>>>>> b4df906ad302ae56cc51b7c3f828dfa9cf5c34c9
 
 ### Sensors:
 #### - Sensor1: Proximity
@@ -64,13 +68,10 @@ Flashing the light to warn the risk of flipping over when the angle of the wheel
 ![IoT1 Exhibition](/docs/resources/images/orientation_2.png)
 
 ### connect the vibration motor to the Arduino Omega
-![IoT1 Exhibition](/docs/resources/images/vibration_2.png)
+![IoT1 Exhibition](/docs/resources/images/vibration_2.png) 
 
 
 ## Main Components
-
-__**Disclaimer:**__ the design of this platform focuses on flexibility and
-technology exploration rather than optimisation.
 
 The main design includes a Raspberry Pi 3 and an Arduino Mega 2560 on the wheelchair frame.
 
@@ -94,7 +95,22 @@ powers the Raspberry Pi. The Arduino Mega communicates and receives power from t
 Raspberry Pi via USB. A Feather (Arduino-like development board) on the wheel connects to
 the Raspberry Pi via Bluetooth to sense and actuate from the wheel.
 
-![Main Wheelchair components](/docs/resources/images/architecture.jpg)
+![Main Wheelchair components](/docs/workshops/images/wheechair-components.png)
+
+## Step-by-step instructions
+### Create a project and repository in Github and clone repository
+### Sign up on the Data-Centric Design Hub
+Create a thing in DCD hub and generates an access token for your Thing.
+### Install Python dependencies 
+This Python dependency is a communication protocol to talk to the DCD hub.
+### Set environmental variables
+It is to read the id and access token of our thing
+### Find and download the files (##fixme) from github and open in Arduino
+### Download libraries in Arduino
+<open Arduino<Sketch<included library<manage libraries<search and download Adafruit BNO055, Adafruit BluefruitLE nRF51 #FIXME Proximity
+###
+
+
 
 
 ## Files in the directory 'wheelchair':
