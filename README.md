@@ -97,7 +97,7 @@ Create a thing in DCD hub and generates an access token for your Thing. This Pyt
 #### Set environmental variables
 Find the .env file and set the thing id and token
 #### Connect your raspberry pi to the network
-Plug in the Micro SD card into your laptop, create a file for setting up your network details and connect the pi to the power bank
+Plug in the Micro SD card into your laptop, set up your network details in the file ‘wpa_supplicant.conf’. Then plug the Micro SD card in the raspberry pi and connect the pi to the power bank
 #### Log into the Pi with ssh and clone the repository on your Pi
 #### Set the thing Id and token on your Pi
 #### Install Python dependencies on the Pi
