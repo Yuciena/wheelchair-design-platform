@@ -104,14 +104,14 @@ Plug in the Micro SD card into your laptop, set up your network details in the f
 #### Install bluetooth dependencies in Python
 #### Download libraries in Arduino
 <open Arduino<Sketch<included library<manage libraries<search and download Adafruit BNO055, Adafruit BluefruitLE nRF51
-#### Open and upload the file (arduino_prox_vibr.info) from github and open in Arduino Mega
-#### Open the file of bno055_gatt_service.ino, set the name of the feather and Setup Orientation GATT service with UUID
-#### Upload the file(bno055_gatt_service.ino) to the feather
+#### Open the file arduino_prox_vibr.ino and upload it to the Arduino Mega
+#### Open the file bno055_gatt_service.ino, set the name of the feather and Setup Orientation GATT service with UUID
+#### Upload the file bno055_gatt_service.ino to the feather
 #### Find the MAC address of your feather and add it to the .env file
 #### Put the main components on the wheelchair and wire the components
-see the previous chapter (Components)
-#### Run the code from the file of subscrib_gatt_orientation.py
-#### GO to Grafana, select the property ID and set the value of your data and then you can see the data visualization in Grafana
+see the previous chapter (Components that are implemented)
+#### Run the code from the file subscrib_gatt_orientation0.py
+#### Go to Grafana (https://dwd.tudelft.nl/grafana/?orgId=1), select the property ID and set the value of your data and then you can see the data visualization in Grafana.
 
 
 ## Remaining files in the directory 'wheelchair':
