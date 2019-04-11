@@ -90,31 +90,6 @@ Location: between Adafruit Bluefruit and Powerbank
 Location: between Raspberry Pi and powerbank.
 
 
-## Main Components
-
-The main design includes a Raspberry Pi 3 and an Arduino Mega 2560 on the wheelchair frame.
-
-The Arduino Mega is the micro-controller of the platform. Fixed on the main frame of the wheelchair,
-it can collect data from sensors (e.g. force sensors, accelerometers), and trigger actions from actuators
-(e.g. LEDs, vibration motors).
-
-More on the Arduino Mega can be found [here](/docs/resources/arduino.md "Arduino resources").
-
-Raspberry Pi is a small computer. It is also fixed to the main frame of the wheelchair,
-where it can:
-* interact with the Arduino Mega via USB to receive data and transmit commands;
-* interact with the Internet to transmit commands and receive data;
-* store data locally in files;
-* run (machine learning) algorithms.
-
-More on the Raspberry Pi can be found [here](/docs/resources/raspberrypi.md "Raspberry Pi resources").
-
-These components fit together as shown on the following diagram. A large powerbank
-powers the Raspberry Pi. The Arduino Mega communicates and receives power from the
-Raspberry Pi via USB. A Feather (Arduino-like development board) on the wheel connects to
-the Raspberry Pi via Bluetooth to sense and actuate from the wheel.
-
-![Main Wheelchair components](/docs/workshops/images/wheechair-components.png)
 
 ## Step-by-step instructions
 #### Create a project and repository in Github and clone repository
@@ -136,41 +111,18 @@ Plug in the Micro SD card into your laptop, create a file for setting up your ne
 #### Find the MAC address of your feather and add it to the .env file
 #### Put the main components on the wheelchair and wire the components
 see the previous chapter (Components)
-#### Run the code from the file of subscrib_gatt_orientation.py 
+#### Run the code from the file of subscrib_gatt_orientation.py
 #### GO to Grafana, select the property ID and set the value of your data and then you can see the data visualization in Grafana
 
 
-## Files in the directory 'wheelchair':
-
-### bno055_gatt_service
-This code is run on the Blue Feather to detect the orientation from the orientation sensor.
-It writes the data to both the serial port of the laptop and the serial port of the bluetooth device. Anyone who subscribes to the bluetooth device can see the data.
-
-### IRDistance_gatt_service
-This code is run on the Blue Feather to detect the distance of an object to the proximity sensor.
-It writes the data to both the serial port of the laptop and the serial port of the bluetooth device. Anyone who subscribes to the bluetooth device can see the data.
-
-### push_button_led_log
-This code is run on an arduino board to detect whether the button is pressed or not. If the button is pressed =, the LED goes on. If the button is not pressed the LED will be off. This code has been copied from the arduino example folder of the main repository to explore how activity of a
-button can be detected and how to send a signal to the LED. For the project this code can be broken down into the a piece for warning the IKEA staff (button) and warning the user of the risk of falling (LED).
+## Remaining files in the directory 'wheelchair':
 
 ### dcd_hub.py
-This code has been used to test the connection with the server used for this project. It will indicate whether the connection has been established successfully or not.
+This code can be used to test the connection with the server used for this project. It will indicate whether the connection has been established successfully or not.
 
 ### get_started.py
-This code has been used to test whether we were able to receive data on Grafana, a data visualisation tool connected to the dcd_hub (server). It generates a random property with a unique ID, which can be used to identify the property on Grafana.
+This code can be used to test whether you are able to receive data on Grafana, a data visualisation tool connected to the dcd_hub (server). It generates a random property with a unique ID, which can be used to identify the property on Grafana.
 
-### serial_example.py
-This code is meant to read data from the serial port of your laptop and send it to the server, so that it can be visualised on Grafana.
-
-### subscribe_gatt_orientation.py
-This code is run on the raspberry pi to subscribe the pi to the Blue Feather. The raspberry pi will read the data from the orientation sensor that the Feather is sending and then the pi sends it to the dcd_hub server, so that it can be visualised on grafana.
-
-### subscribe_gatt_proximity.py
-This code is run on the raspberry pi to subscribe the pi to the Blue Feather. The raspberry pi will read the data from the proximity sensor that the Feather is sending and then the pi sends it to the dcd_hub server, so that it can be visualised on grafana.
-
-### ml/1_collect_and_label.py
-...
 
 
 # Wheelchair Design Platform
