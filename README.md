@@ -101,7 +101,7 @@ Plug in the Micro SD card into your laptop, set up your network details in the f
 #### Log into the Pi with ssh and clone the repository on your Pi
 #### Set the thing Id and token on your Pi
 #### Install Python dependencies on the Pi
-#### Install feather dependencies in Python
+#### Install bluetooth dependencies in Python
 #### Download libraries in Arduino
 <open Arduino<Sketch<included library<manage libraries<search and download Adafruit BNO055, Adafruit BluefruitLE nRF51
 #### Open and upload the file (arduino_prox_vibr.info) from github and open in Arduino Mega
