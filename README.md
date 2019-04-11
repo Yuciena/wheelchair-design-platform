@@ -67,6 +67,35 @@ Flashing the light to warn the risk of flipping over when the angle of the wheel
 ![IoT1 Exhibition](/docs/resources/images/vibration_2.png)
 
 
+## Main Components
+
+__**Disclaimer:**__ the design of this platform focuses on flexibility and
+technology exploration rather than optimisation.
+
+The main design includes a Raspberry Pi 3 and an Arduino Mega 2560 on the wheelchair frame.
+
+The Arduino Mega is the micro-controller of the platform. Fixed on the main frame of the wheelchair,
+it can collect data from sensors (e.g. force sensors, accelerometers), and trigger actions from actuators
+(e.g. LEDs, vibration motors).
+
+More on the Arduino Mega can be found [here](/docs/resources/arduino.md "Arduino resources").
+
+Raspberry Pi is a small computer. It is also fixed to the main frame of the wheelchair,
+where it can:
+* interact with the Arduino Mega via USB to receive data and transmit commands;
+* interact with the Internet to transmit commands and receive data;
+* store data locally in files;
+* run (machine learning) algorithms.
+
+More on the Raspberry Pi can be found [here](/docs/resources/raspberrypi.md "Raspberry Pi resources").
+
+These components fit together as shown on the following diagram. A large powerbank
+powers the Raspberry Pi. The Arduino Mega communicates and receives power from the
+Raspberry Pi via USB. A Feather (Arduino-like development board) on the wheel connects to
+the Raspberry Pi via Bluetooth to sense and actuate from the wheel.
+
+![Main Wheelchair components](/docs/workshops/images/wheechair-components.png)
+
 
 ## Files in the directory 'wheelchair':
 
@@ -135,34 +164,7 @@ get started, you can find some additional resources
 
 * [Git manipulation such as Pull Request](/docs/resources/git.md "Git manipulation").
 
-## Main Components
 
-__**Disclaimer:**__ the design of this platform focuses on flexibility and
-technology exploration rather than optimisation.
-
-The main design includes a Raspberry Pi 3 and an Arduino Mega 2560 on the wheelchair frame.
-
-The Arduino Mega is the micro-controller of the platform. Fixed on the main frame of the wheelchair,
-it can collect data from sensors (e.g. force sensors, accelerometers), and trigger actions from actuators
-(e.g. LEDs, vibration motors).
-
-More on the Arduino Mega can be found [here](/docs/resources/arduino.md "Arduino resources").
-
-Raspberry Pi is a small computer. It is also fixed to the main frame of the wheelchair,
-where it can:
-* interact with the Arduino Mega via USB to receive data and transmit commands;
-* interact with the Internet to transmit commands and receive data;
-* store data locally in files;
-* run (machine learning) algorithms.
-
-More on the Raspberry Pi can be found [here](/docs/resources/raspberrypi.md "Raspberry Pi resources").
-
-These components fit together as shown on the following diagram. A large powerbank
-powers the Raspberry Pi. The Arduino Mega communicates and receives power from the
-Raspberry Pi via USB. A Feather (Arduino-like development board) on the wheel connects to
-the Raspberry Pi via Bluetooth to sense and actuate from the wheel.
-
-![Main Wheelchair components](/docs/workshops/images/wheechair-components.png)
 
 ## List of suggested components:
 
