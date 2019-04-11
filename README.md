@@ -101,29 +101,24 @@ the Raspberry Pi via Bluetooth to sense and actuate from the wheel.
 #### Create a project and repository in Github and clone repository
 #### Sign up on the Data-Centric Design Hub and install the dependencies in Atom
 Create a thing in DCD hub and generates an access token for your Thing. This Python dependency is a communication protocol to talk to the DCD hub.
+#### Set environmental variables
+Find the .env file and set the thing id and token
 #### Connect your raspberry pi to the network
 Plug in the Micro SD card into your laptop, create a file for setting up your network details and connect the pi to the power bank
 #### Log into the Pi with ssh and clone the repository on your Pi
 #### Set the thing Id and token on your Pi
 #### Install Python dependencies on the Pi
-#### Set environmental variables
-Find the .env file and set the thing id and token
-#### Put the main components on the wheelchair and wire the components
-#### Download and upload the file (arduino_prox_vibr.info) from github and open in Arduino Mega
+#### Install feather dependencies in Python
 #### Download libraries in Arduino
 <open Arduino<Sketch<included library<manage libraries<search and download Adafruit BNO055, Adafruit BluefruitLE nRF51
-#### Set the name of the feather and Setup Orientation GATT service with UUID(bno055_gatt_service.ino)
-#### Open and upload the file(bno055_gatt_service.ino) to the feather
-#### Run the code from the file of subscrib_gatt_orientation.py to the Raspberry Pi
-
+#### Open and upload the file (arduino_prox_vibr.info) from github and open in Arduino Mega
+#### Open the file of bno055_gatt_service.ino, set the name of the feather and Setup Orientation GATT service with UUID
+#### Upload the file(bno055_gatt_service.ino) to the feather
+#### Find the MAC address of your feather and add it to the .env file
+#### Put the main components on the wheelchair and wire the components
 see the previous chapter (Components)
-
-#### GO to Grafana, select the property ID and set the value of your data
-#### Subscribe to the GATT service from the Raspberry Pi and run the code of XXXXXX
-#### 
-
-
-
+#### Run the code from the file of subscrib_gatt_orientation.py 
+#### GO to Grafana, select the property ID and set the value of your data and then you can see the data visualization in Grafana
 
 
 ## Files in the directory 'wheelchair':
