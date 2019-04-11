@@ -103,7 +103,7 @@ Plug in the Micro SD card into your laptop, set up your network details in the f
 #### Install Python dependencies on the Pi
 #### Install bluetooth dependencies in Python
 #### Download libraries in Arduino
-<open Arduino<Sketch<included library<manage libraries<search and download Adafruit BNO055, Adafruit BluefruitLE nRF51
+-> open Arduino>Sketch>include library>manage libraries>search and download Adafruit BNO055, Adafruit BluefruitLE nRF51
 #### Open the file arduino_prox_vibr.ino and upload it to the Arduino Mega
 #### Open the file bno055_gatt_service.ino, set the name of the feather and Setup Orientation GATT service with UUID
 #### Upload the file bno055_gatt_service.ino to the feather
