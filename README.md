@@ -28,12 +28,8 @@ Ikea customers, wheelchair company, Ikea staff, furnitures etc.
 Entrance → Find Elevator and find routes(GPS) → Visit sample room(Proximity / Vibration / Speaker / Camera) → Scan the barcode of furniture → Look for the furniture in the warehouse(Proximity / Bluetooth / Button) → Checkout
 
 ### Poster and video
-<<<<<<< HEAD
 You can see our video here: https://www.youtube.com/watch?v=OvhNTrp6YjQ&t=57s
-=======
-You can see our video here: https://www.youtube.com/watch?v=OvhNTrp6YjQ
 
-<<<<<<< HEAD
 ![IoT1 Exhibition](/docs/resources/images/poster.jpg)
 =======
 ![IoT1 Exhibition](/docs/workshops/images/poster a1-01.jpg)
