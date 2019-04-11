@@ -29,6 +29,7 @@ Entrance → Find Elevator and find routes(GPS) → Visit sample room(Proximity 
 
 ### Poster and video
 You can see our video here: https://www.youtube.com/watch?v=OvhNTrp6YjQ
+
 ![IoT1 Exhibition](/docs/workshops/images/poster a1-01.jpg)
 
 ### Sensors:
