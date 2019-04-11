@@ -112,9 +112,9 @@ It is to read the id and access token of our thing
 #### Upload *** to the feather
 #### Upload *** to the Raspberry Pi
 #### Put the main components on the wheelchair
-Put the Raspberry Pi and power bank to the right of wheelchair main frame
-Put the Aurdino Mega, power bank, Feather and orientation sensor with breadboard to the left of wheelchair main frame
-Put the proximity sensor on the back of the wheelchair
+Put the Raspberry Pi and power bank to the right of wheelchair main frame; 
+Put the Aurdino Mega, power bank, Feather and orientation sensor with breadboard to the left of wheelchair main frame; 
+Put the proximity sensor on the back of the wheelchair; 
 Put the vibration actuator on the front of the wheelchair where users can detect the vibration while leaning on it.
 #### Wire the components ======> link to how to wire the hardware FIXMEXXXX
 #### 
