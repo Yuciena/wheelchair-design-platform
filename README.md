@@ -36,26 +36,26 @@ You can see our video here: https://www.youtube.com/watch?v=OvhNTrp6YjQ&t=57s
 ### Sensors:
 #### - Sensor1: Proximity
 Detect surrounding objects and people in order to avoid accidents when navigating through the shop. We set the proximity sensor on the back of the wheelchair as the disabled normally cannot notice the objects and people back.
-#### - Sensor 2: Network detection with beacon
+#### - Sensor 2: Network detection with beacon (not implemented)
 Navigate the visiting routes and to specific areas inside of the IKEA building in order to help the disabled find the right places where they want to visit.
 
 #### - Sensor 3: Orientation
 To detect the Z axis of the wheelchair and to predict/give warning whether it is going to flip.
-#### - Sensor 4: Button
+#### - Sensor 4: Button (not implemented)
 Activate the button and send the signal to the IKEA staff that they need help when they cannot reach products on the shelf.
 
 
 
-### Actuator:
+### Actuators:
 #### - Actuator 2: Vibration
 Combined with the proximity sensor, it gives warning for disabled people when the wheelchair is detected to be too close to surrounding objects.
-#### - Actuator 1: Speaker
+#### - Actuator 1: Speaker (not implemented)
 Combined with the network detection sensor, the speaker guides the disabled direction verbally.
-#### - Actuator3: Light
+#### - Actuator3: Light (not implemented)
 Flashing the light to warn the risk of flipping over when the angle of the wheelchair dumping to one side is too large.
 
 
-## components
+## Components that are implemented
 
 ### ARDUINO MEGA
 Location: the wheelchair main frame
@@ -72,7 +72,7 @@ Location: the wheelchair main frame
 Script: subscribe_gatt_orientation0.py
 Connected to: POWERBANK (Physical, Micro USB)
 
-### BNO055 IMU x2
+### BNO055 IMU
 Location: breadboard on the wheelchair main frame
 Connected to:	ADAFRUIT FEATHER (Physical, wires)
 
@@ -88,7 +88,6 @@ Location: between Adafruit Bluefruit and Powerbank
 
 ### USB B CABLE
 Location: between Raspberry Pi and powerbank.
-
 
 
 ## Step-by-step instructions
@@ -121,7 +120,7 @@ see the previous chapter (Components)
 This code can be used to test the connection with the server used for this project. It will indicate whether the connection has been established successfully or not.
 
 ### get_started.py
-This code can be used to test whether you are able to receive data on Grafana, a data visualisation tool connected to the dcd_hub (server). It generates a random property with a unique ID, which can be used to identify the property on Grafana.
+This code can be used to test whether you are able to receive data on Grafana (a data visualisation tool connected to the dcd_hub (server)). It generates a random property with a unique ID, which can be used to identify the property in Grafana.
 
 
 
