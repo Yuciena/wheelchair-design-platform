@@ -1,39 +1,59 @@
 
 # Magic Wheelchair
+### Connected smart wheelchair for IKEA customers
 
-## Assignment 1
+### Purpose of your prototype
+“Make the IKEA shopping experience accessible for the customers on wheelchairs”
 
 ### Context:
 the disabled buying (small) furniture in IKEA by themselves
 
-### User:
-Needs to navigate through the shop, which has very narrow pathways and is often very crowded. This makes it difficult to manoeuvre through the shop. Also finding and using the trolley to pick up products becomes a problem since the user cannot push it forward. Then in the storage pickup, the user often cannot reach the products on the shelf and needs help from the staff.
+## Brief context
+IKEA vision:
+“To create a better everyday life for the many people”
+
+### Current situation
+IKEA stores are huge. These sprawling stores easily take up the length of a football field. It also has very narrow pathways and is often very crowded.Therefore, this makes it difficult to manoeuvre through the shop. In the storage pickup, customers often cannot reach the products on the shelf and need help from IKEA staff. Things are more severe for the customers on the wheelchairs.
+
+### Our vision:
+For the considerable size of IKEA, having electric powered wheelchairs with gps navigations on them would make it easier for the customers on wheelchairs to get around;
+To help customers be aware of the surrounding situations when they are going around would make their IKEA journey more guaranteed;
+To warn customers the risk of flipping over simultaneously could ensure a safe and friendly IKEA journey;
+To provide help whenever it is needed.
 
 ### Stakeholders:
-Ikea customers, wheelchair company, Ikea stuff, Ikea trolley, furnitures etc.
+Ikea customers, wheelchair company, Ikea staff, furnitures etc.
 
 ### Ikea Journey on The Wheelchair Alone / Ikea Magic Wheelchair:
 Entrance → Find Elevator and find routes(GPS) → Visit sample room(Proximity / Vibration / Speaker / Camera) → Scan the barcode of furniture → Look for the furniture in the warehouse(Proximity / Bluetooth / Button) → Checkout
 
-### Sensors:
-#### - GPS (Beacon) = not implemented：
-Navigate the visiting routes and to specific areas inside of the IKEA building in order to help the disabled find the right places where they want to visit. (Network detection in building with beacons?)
-#### - Proximity sensors:
-Detect surrounding objects and people in order to avoid accidents when navigating through the shop. This sensor can also be used for a follow-me system build in the trolley, which can follow the wheelchair, so that the wheelchair user does not have to push the trolley.
-#### - Accelerator sensor
-To detect whether the wheelchair user is going to fall. For example when riding on a slope or over a bump the wheelchair might get tilted.
-#### - Button:
-Activate the button and send the signal to the IKEA staff that they need help when they cannot get the stuff by themselves
+### Poster and video
+You can see our video here: https://www.youtube.com/watch?v=OvhNTrp6YjQ&t=57s
 
-## Assignment 2:
+### Sensors:
+#### - Sensor1: Proximity
+Detect surrounding objects and people in order to avoid accidents when navigating through the shop. We set the proximity sensor on the back of the wheelchair as the disabled normally cannot notice the objects and people back.
+#### - Sensor 2: Network detection with beacon
+Navigate the visiting routes and to specific areas inside of the IKEA building in order to help the disabled find the right places where they want to visit.
+
+#### - Sensor 3: Orientation
+To detect the Z axis of the wheelchair and to predict/give warning whether it is going to flip.
+#### - Sensor 4: Button
+Activate the button and send the signal to the IKEA staff that they need help when they cannot reach products on the shelf.
+
+
 
 ### Actuator:
-#### - Vibration：
-Combined with GPS and give the disabled command of directions through either a vibration actuator or a speaker actuator
-#### - speaker = not implemented:  
-To give verbal guidance for disabled people when the wheelchair is detected to be too close to surrounding objects.
-#### - Light (LED):
-The light is showing the wheelchair user whether the wheelchair is tilted to much: (risk of falling)
+#### - Actuator 2: Vibration
+Combined with the proximity sensor, it gives warning for disabled people when the wheelchair is detected to be too close to surrounding objects.
+#### - Actuator 1: Speaker
+Combined with the network detection sensor, the speaker guides the disabled direction verbally.
+#### - Actuator3: Light
+Flashing the light to warn the risk of flipping over when the angle of the wheelchair dumping to one side is too large.
+
+
+
+
 
 ## Files in the directory 'wheelchair':
 
